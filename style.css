@@ -1,8 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('images/fond-tokyo.jpg') no-repeat center center fixed;
+  background: url('images/fond-tokyo.jpg') no-repeat center center;
   background-size: cover;
+  background-attachment: scroll; /* Évite les bugs sur iOS */
   font-family: sans-serif;
   color: white;
 }
@@ -59,4 +60,3 @@ body {
   left: 5%; bottom: 7%;
   width: 120px; height: 40px;
 }
-

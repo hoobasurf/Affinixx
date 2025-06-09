@@ -1,77 +1,62 @@
 body {
-  body {
-  background: url('images/fond-tokyo.jpg') no-repeat center center fixed;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   margin: 0;
   padding: 0;
+  background: url('images/fond-tokyo.jpg') no-repeat center center fixed;
+  background-size: cover;
   font-family: sans-serif;
   color: white;
 }
 
-h1 {
-  text-align: center;
-  margin: 40px 0 20px;
-  font-size: 32px;
-  text-shadow: 0 0 10px #fff;
+.hotspot-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
-.rooms-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
+/* Styles généraux des zones cliquables */
+.hotspot {
+  position: absolute;
+  display: block;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  z-index: 10;
 }
 
-.room {
-  width: 90%;
-  max-width: 400px;
-  background: rgba(30, 30, 63, 0.8);
-  border: 2px solid #ffffff33;
-  border-radius: 16px;
-  padding: 20px;
-  text-align: center;
-  font-size: 20px;
-  box-shadow: 0 0 15px #ffffff22;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.3s;
+.hotspot:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
 }
 
-.room:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 25px #ffffff66;
-  background-color: rgba(50, 50, 90, 0.9);
+/* 🎯 Positionnement basé sur ton image (image 1152x768px) */
+
+.amicale {
+  left: 9%; top: 33%;
+  width: 180px; height: 60px;
 }
 
-/* Style spécial pour le conteneur de la première room (exemple) */
-.first-room-container {
-  position: fixed;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 300px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid #ff00ff;
-  box-shadow:
-    0 0 8px 2px #ff00ff,
-    0 0 15px 5px #ff66ff;
-  border-radius: 15px;
-  color: #ff66ff;
-  font-size: 1.2rem;
-  text-align: center;
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  pointer-events: auto;
+.serieuse {
+  left: 38%; top: 18%;
+  width: 240px; height: 80px;
 }
 
-@media (max-width: 768px) {
-  body {
-    background-size: contain; /* mieux pour portrait */
-    background-repeat: no-repeat;
-    background-position: center top;
-  }
+.fun {
+  right: 9%; top: 32%;
+  width: 180px; height: 60px;
+}
+
+.parents {
+  right: 17%; top: 55%;
+  width: 180px; height: 60px;
+}
+
+.createur {
+  right: 6%; bottom: 7%;
+  width: 120px; height: 40px;
+}
+
+.retour {
+  left: 5%; bottom: 7%;
+  width: 120px; height: 40px;
 }
 

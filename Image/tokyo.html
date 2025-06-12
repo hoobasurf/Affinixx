@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ville AFFINIX</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html {
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Arial', sans-serif;
+    }
+    .background {
+      background-image: url('fond-tokyo.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+    }
+
+    .zone {
+      position: absolute;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .amicale:hover { box-shadow: 0 0 15px #ff66cc; }
+    .serieuse:hover { box-shadow: 0 0 15px #ff99ff; }
+    .fun:hover     { box-shadow: 0 0 15px #ffc266; }
+    .parents:hover { box-shadow: 0 0 15px #66ccff; }
+    .createur:hover{ box-shadow: 0 0 15px #3399ff; }
+
+    @media screen and (max-width: 768px) {
+      .zone {
+        transform: scale(0.6);
+        transform-origin: top left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <a href="amicale.html" class="zone amicale" style="top: 20%; left: 10%; width: 25%; height: 10%;"></a>
+    <a href="serieuse.html" class="zone serieuse" style="top: 32%; left: 50%; width: 30%; height: 10%;"></a>
+    <a href="fun.html" class="zone fun" style="top: 45%; left: 20%; width: 28%; height: 10%;"></a>
+    <a href="parents.html" class="zone parents" style="top: 58%; left: 55%; width: 30%; height: 10%;"></a>
+    <a href="createur.html" class="zone createur" style="top: 72%; left: 40%; width: 25%; height: 10%;"></a>
+  </div>
+</body>
+</html>
